@@ -19,6 +19,8 @@
 		CF3CC4092525AA36003A9032 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3CC4082525AA36003A9032 /* TextCell.swift */; };
 		CF50EEED25343C7200A09790 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50EEEC25343C7200A09790 /* MainViewController.swift */; };
 		CF50EEF525343C8D00A09790 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF50EEF425343C8D00A09790 /* MainViewController.storyboard */; };
+		CF50EF28253536A200A09790 /* InsetGridwithiOS14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50EF27253536A200A09790 /* InsetGridwithiOS14ViewController.swift */; };
+		CF50EF30253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */; };
 		CF97B0572534267B007E1EC9 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97B0562534267B007E1EC9 /* SampleCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		CF3CC4082525AA36003A9032 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		CF50EEEC25343C7200A09790 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF50EEF425343C8D00A09790 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		CF50EF27253536A200A09790 /* InsetGridwithiOS14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGridwithiOS14ViewController.swift; sourceTree = "<group>"; };
+		CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsetGridwithiOS14ViewController.storyboard; sourceTree = "<group>"; };
 		CF97B0562534267B007E1EC9 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 		CF3CC3B325255B31003A9032 /* CollectionViewPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CF50EF262535368000A09790 /* iOS14 */,
 				CF50EEF925343C9800A09790 /* Main */,
 				CF2DCBB425342858003D5C22 /* SampleCollectionView */,
 				CF3CC3B425255B31003A9032 /* AppDelegate.swift */,
@@ -157,6 +162,15 @@
 				CF50EEEC25343C7200A09790 /* MainViewController.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		CF50EF262535368000A09790 /* iOS14 */ = {
+			isa = PBXGroup;
+			children = (
+				CF50EF27253536A200A09790 /* InsetGridwithiOS14ViewController.swift */,
+				CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */,
+			);
+			path = iOS14;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +280,7 @@
 				CF2DCBB8253428AE003D5C22 /* SampleViewCell.xib in Resources */,
 				CF3CC3C125255B33003A9032 /* LaunchScreen.storyboard in Resources */,
 				CF3CC3BE25255B33003A9032 /* Assets.xcassets in Resources */,
+				CF50EF30253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +310,7 @@
 				CF50EEED25343C7200A09790 /* MainViewController.swift in Sources */,
 				CF3CC3B525255B31003A9032 /* AppDelegate.swift in Sources */,
 				CF97B0572534267B007E1EC9 /* SampleCollectionViewController.swift in Sources */,
+				CF50EF28253536A200A09790 /* InsetGridwithiOS14ViewController.swift in Sources */,
 				CF2DCBB7253428AE003D5C22 /* SampleViewCell.swift in Sources */,
 				CF3CC3B725255B31003A9032 /* SceneDelegate.swift in Sources */,
 			);

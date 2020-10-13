@@ -14,12 +14,15 @@ final class MainViewController: UIViewController {
     }
 
     enum Content: CaseIterable {
-        case sample
+        case iOS13
+        case iOS14
 
         var title: String {
             switch self {
-            case .sample:
+            case .iOS13:
                 return "iOS13 ~ "
+            case .iOS14:
+                return "iOS14"
             }
         }
     }
@@ -42,7 +45,7 @@ final class MainViewController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewLayout {
-        let config = UICollectionLayoutListConfiguration(appearance: .grouped)
+        let config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         return UICollectionViewCompositionalLayout.list(using: config)
     }
 
@@ -65,9 +68,15 @@ final class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch Content.allCases[indexPath.row] {
-        case .sample:
+        case .iOS13:
             let vc = SampleCollectionViewController()
             navigationController?.pushViewController(vc, animated: true)
+        case .iOS14:
+            guard let vc = UIStoryboard(name: "InsetGridwithiOS14ViewController", bundle: .main).instantiateInitialViewController() as? InsetGridwithiOS14ViewController else {
+                fatalError("No implemented")
+            }
+            navigationController?.pushViewController(vc, animated: true)
         }
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
