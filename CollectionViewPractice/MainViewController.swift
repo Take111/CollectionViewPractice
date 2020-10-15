@@ -16,6 +16,7 @@ final class MainViewController: UIViewController {
     enum Content: CaseIterable {
         case iOS13
         case iOS14
+        case horizontalMultiScroll
 
         var title: String {
             switch self {
@@ -23,6 +24,8 @@ final class MainViewController: UIViewController {
                 return "iOS13 ~ "
             case .iOS14:
                 return "iOS14"
+            case .horizontalMultiScroll:
+                return "Horizontal Multi Scroll"
             }
         }
     }
@@ -54,6 +57,10 @@ final class MainViewController: UIViewController {
             var content = cell.defaultContentConfiguration()
             content.text = item.title
             cell.contentConfiguration = content
+
+            var disclosureOptions = UICellAccessory.OutlineDisclosureOptions(style: .automatic)
+            disclosureOptions.tintColor = UIColor.gray
+            cell.accessories = [.outlineDisclosure(options: disclosureOptions)]
         }
         dataSource = UICollectionViewDiffableDataSource<Section, Content>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, item) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: item)
@@ -70,11 +77,19 @@ extension MainViewController: UICollectionViewDelegate {
         switch Content.allCases[indexPath.row] {
         case .iOS13:
             let vc = SampleCollectionViewController()
+            vc.navigationTitle = Content.allCases[indexPath.row].title
             navigationController?.pushViewController(vc, animated: true)
         case .iOS14:
             guard let vc = UIStoryboard(name: "InsetGridwithiOS14ViewController", bundle: .main).instantiateInitialViewController() as? InsetGridwithiOS14ViewController else {
                 fatalError("No implemented")
             }
+            vc.navigationTitle = Content.allCases[indexPath.row].title
+            navigationController?.pushViewController(vc, animated: true)
+        case .horizontalMultiScroll:
+            guard let vc = UIStoryboard(name: "HorizontalMultiScrollViewController", bundle: .main).instantiateInitialViewController() as? HorizontalMultiScrollViewController else {
+                fatalError("No implemented")
+            }
+            vc.navigationTitle = Content.allCases[indexPath.row].title
             navigationController?.pushViewController(vc, animated: true)
         }
         collectionView.deselectItem(at: indexPath, animated: true)

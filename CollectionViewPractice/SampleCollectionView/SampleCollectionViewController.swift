@@ -7,13 +7,17 @@
 
 import UIKit
 
-class SampleCollectionViewController: UIViewController {
+final class SampleCollectionViewController: UIViewController {
+
+    var navigationTitle = "" 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         view.addSubview(collectionView)
+
+        navigationItem.title = navigationTitle
     }
 
     override func viewWillLayoutSubviews() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InsetGridwithiOS14ViewController: UIViewController {
+final class InsetGridwithiOS14ViewController: UIViewController {
 
     enum Section {
         case main
@@ -15,12 +15,16 @@ class InsetGridwithiOS14ViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    var navigationTitle = ""
+
     var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
+
+        navigationItem.title = navigationTitle
     }
 
     private func createLayout() -> UICollectionViewLayout {

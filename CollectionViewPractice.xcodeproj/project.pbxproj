@@ -22,6 +22,10 @@
 		CF50EF28253536A200A09790 /* InsetGridwithiOS14ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50EF27253536A200A09790 /* InsetGridwithiOS14ViewController.swift */; };
 		CF50EF30253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */; };
 		CF97B0572534267B007E1EC9 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF97B0562534267B007E1EC9 /* SampleCollectionViewController.swift */; };
+		CFFE050A25387C8C0089FA89 /* HorizontalMultiScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE050925387C8C0089FA89 /* HorizontalMultiScrollViewController.swift */; };
+		CFFE051225387C9A0089FA89 /* HorizontalMultiScrollViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFE051125387C9A0089FA89 /* HorizontalMultiScrollViewController.storyboard */; };
+		CFFE0518253881D70089FA89 /* HorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE0516253881D70089FA89 /* HorizontalViewCell.swift */; };
+		CFFE0519253881D70089FA89 /* HorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE0517253881D70089FA89 /* HorizontalViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		CF50EF27253536A200A09790 /* InsetGridwithiOS14ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGridwithiOS14ViewController.swift; sourceTree = "<group>"; };
 		CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InsetGridwithiOS14ViewController.storyboard; sourceTree = "<group>"; };
 		CF97B0562534267B007E1EC9 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		CFFE050925387C8C0089FA89 /* HorizontalMultiScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMultiScrollViewController.swift; sourceTree = "<group>"; };
+		CFFE051125387C9A0089FA89 /* HorizontalMultiScrollViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HorizontalMultiScrollViewController.storyboard; sourceTree = "<group>"; };
+		CFFE0516253881D70089FA89 /* HorizontalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewCell.swift; sourceTree = "<group>"; };
+		CFFE0517253881D70089FA89 /* HorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 		CF3CC3B325255B31003A9032 /* CollectionViewPractice */ = {
 			isa = PBXGroup;
 			children = (
+				CFFE050825387C670089FA89 /* MultiScroll */,
 				CF50EF262535368000A09790 /* iOS14 */,
 				CF50EEF925343C9800A09790 /* Main */,
 				CF2DCBB425342858003D5C22 /* SampleCollectionView */,
@@ -171,6 +180,25 @@
 				CF50EF2F253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard */,
 			);
 			path = iOS14;
+			sourceTree = "<group>";
+		};
+		CFFE050825387C670089FA89 /* MultiScroll */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE051D253881E00089FA89 /* Views */,
+				CFFE050925387C8C0089FA89 /* HorizontalMultiScrollViewController.swift */,
+				CFFE051125387C9A0089FA89 /* HorizontalMultiScrollViewController.storyboard */,
+			);
+			path = MultiScroll;
+			sourceTree = "<group>";
+		};
+		CFFE051D253881E00089FA89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE0516253881D70089FA89 /* HorizontalViewCell.swift */,
+				CFFE0517253881D70089FA89 /* HorizontalViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +304,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFE051225387C9A0089FA89 /* HorizontalMultiScrollViewController.storyboard in Resources */,
 				CF50EEF525343C8D00A09790 /* MainViewController.storyboard in Resources */,
 				CF2DCBB8253428AE003D5C22 /* SampleViewCell.xib in Resources */,
 				CF3CC3C125255B33003A9032 /* LaunchScreen.storyboard in Resources */,
 				CF3CC3BE25255B33003A9032 /* Assets.xcassets in Resources */,
+				CFFE0519253881D70089FA89 /* HorizontalViewCell.xib in Resources */,
 				CF50EF30253536DA00A09790 /* InsetGridwithiOS14ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFE050A25387C8C0089FA89 /* HorizontalMultiScrollViewController.swift in Sources */,
 				CF3CC4092525AA36003A9032 /* TextCell.swift in Sources */,
 				CF3CC4042525A9DB003A9032 /* ListCell.swift in Sources */,
 				CF50EEED25343C7200A09790 /* MainViewController.swift in Sources */,
 				CF3CC3B525255B31003A9032 /* AppDelegate.swift in Sources */,
 				CF97B0572534267B007E1EC9 /* SampleCollectionViewController.swift in Sources */,
+				CFFE0518253881D70089FA89 /* HorizontalViewCell.swift in Sources */,
 				CF50EF28253536A200A09790 /* InsetGridwithiOS14ViewController.swift in Sources */,
 				CF2DCBB7253428AE003D5C22 /* SampleViewCell.swift in Sources */,
 				CF3CC3B725255B31003A9032 /* SceneDelegate.swift in Sources */,
