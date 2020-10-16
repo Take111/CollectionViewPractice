@@ -11,8 +11,9 @@ class HorizontalViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var circleView: UIView! {
         didSet {
+            circleView.backgroundColor = .lightGray
             circleView.layer.masksToBounds = true
-            circleView.layer.cornerRadius = circleView.bounds.size.height / 2
+            circleView.layer.cornerRadius = CGFloat(12)
         }
     }
 
