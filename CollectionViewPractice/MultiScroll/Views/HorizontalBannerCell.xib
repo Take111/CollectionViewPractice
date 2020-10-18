@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HorizontalBannerCell" customModule="CollectionViewPractice" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="HorizontalBannerCell" customModule="CollectionViewPractice" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="315" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -19,7 +19,19 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odk-9v-98J">
                         <rect key="frame" x="0.0" y="0.0" width="315" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-nC-scz">
+                                <rect key="frame" x="136.5" y="49.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LZb-nC-scz" firstAttribute="centerX" secondItem="Odk-9v-98J" secondAttribute="centerX" id="GeY-Pr-e8y"/>
+                            <constraint firstItem="LZb-nC-scz" firstAttribute="centerY" secondItem="Odk-9v-98J" secondAttribute="centerY" id="RGa-1G-w1K"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -33,6 +45,7 @@
             <size key="customSize" width="249" height="107"/>
             <connections>
                 <outlet property="backgroundColorView" destination="Odk-9v-98J" id="kGo-8e-abx"/>
+                <outlet property="numberLabel" destination="LZb-nC-scz" id="OAk-I6-SWO"/>
             </connections>
             <point key="canvasLocation" x="-101" y="-39"/>
         </collectionViewCell>

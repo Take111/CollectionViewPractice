@@ -10,16 +10,19 @@ import UIKit
 class HorizontalBannerCell: UICollectionViewCell {
 
     @IBOutlet private weak var backgroundColorView: UIView!
+    @IBOutlet private weak var numberLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        backgroundColor = .gray
     }
 }
 
 extension HorizontalBannerCell {
 
-    func configureCell(color: UIColor) {
-        backgroundColorView.backgroundColor = color
+    func configureCell(number: String?) {
+        guard let number = number else { return }
+        numberLabel.text = number
     }
 }
